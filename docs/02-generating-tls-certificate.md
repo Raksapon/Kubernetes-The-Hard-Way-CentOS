@@ -4,7 +4,7 @@
 ในการใช้งาน TLS ส่วนของการ Authenitation ใน TLS ใช้ [Public-Key Cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) ในส่วนนี้จึงสร้าง key pair โดยหลักคิดก็คือว่า component ตัวไหนทำหน้าที่เป็น Server ในการให้บริการก็ต้องสร้าง key pair ให้ และ component ไหนทำหน้าที่เป็น client ในการขอใช้บริการก็ต้องสร้าง key pair ให้
 ![Kubernetes and TLS Information](https://github.com/rdamrong/Kubernetes-The-Hard-Way-CentOS/blob/master/images/kube-component.png)
 - วงกลมสีฟ้าที่มีอักษร S แสดงในองค์ประกอบนั้นทำหน้าที่เป็น Server ที่ทำหน้าที่ให้บริการ service ในหน้าที่ของตัวเอง
-- วงกลมสีฟ้าที่มีอักษร C แสดงในองค์ประกอบนั้นทำหน้าที่เป็น Client ต้องขอใช้บริการใน service ที่ต้องการ
+- วงกลมสีเขียวที่มีอักษร C แสดงในองค์ประกอบนั้นทำหน้าที่เป็น Client ต้องขอใช้บริการใน service ที่ต้องการ
 > ในเอกสาร version แรกจะเป็นไปตามแนวทางที่ผู้เขียนอ้างอิงถึงจะมีจุดสังเกตุอยู่ 2 จุด
 > - client key pair จาก kube-apiserver ไปยัง etcd จะใช้ key pair ของ etcd ในการเชื่อมต่อ
 > - client key pair จาก kube-apiserver ไปยัง kubelet จะใช้ key pair ของ kube-apiserver ในการเชื่อมต่อ
